@@ -3,7 +3,7 @@ import numpy as np
 
 # Load the CSV file into a pandas DataFrame
 try:
-    df = pd.read_csv("results-survey539458_16052025.csv")
+    df = pd.read_csv("Ressources/results-survey539458_16052025.csv")
 
     # Drop rows where 'Response ID' is NaN, as these are likely incomplete/test entries
     if 'Response ID' in df.columns:
@@ -16,7 +16,7 @@ try:
             pass  # If it fails, proceed without this specific conversion
 
     # --- Data Cleaning and Conversion ---
-    df_original_for_mapping = pd.read_csv("results-survey539458_16052025.csv")
+    df_original_for_mapping = pd.read_csv("Ressources/results-survey539458_16052025.csv")
     if 'Response ID' in df_original_for_mapping.columns:  # Apply the same initial cleaning
         df_original_for_mapping.dropna(subset=['Response ID'], inplace=True)
         try:
